@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{473E133E-6D85-4C74-B25A-5F2D01938E15}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Autocinema</RootNamespace>
+    <AssemblyName>Autocinema</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\..\OneDrive\Escritorio\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Syncfusion.Core.WinForms, Version=19.1460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Data.WinForms, Version=19.1460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grid.Base, Version=19.1460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Grid.Base.19.1.0.54\lib\net46\Syncfusion.Grid.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows, Version=19.1460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Grid.Windows.19.1.0.54\lib\net46\Syncfusion.Grid.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.GridCommon.WinForms, Version=19.1460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Licensing, Version=19.1460.0.54, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.19.1.0.54\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfDataGrid.WinForms, Version=19.1460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfInput.WinForms, Version=19.1460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SfListView.WinForms, Version=19.1460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Base, Version=19.1460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.Base.19.1.0.54\lib\net46\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows, Version=19.1460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.Windows.19.1.0.54\lib\net46\Syncfusion.Shared.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SpellChecker.Base, Version=19.1460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.SpellChecker.Base.19.1.0.54\lib\net46\Syncfusion.SpellChecker.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Base, Version=19.1460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Tools.Base.19.1.0.54\lib\net46\Syncfusion.Tools.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Windows, Version=19.1460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Tools.Windows.19.1.0.54\lib\net46\Syncfusion.Tools.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.TreeMap.Windows, Version=19.1460.0.54, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="autocinemaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>autocinemaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bdConexion\Conexion.cs" />
+    <Compile Include="bdConexion\ConexionBoletos.cs" />
+    <Compile Include="bdConexion\ConexionClientes.cs" />
+    <Compile Include="bdConexion\ConexionHorarios.cs" />
+    <Compile Include="bdConexion\ConexionPeliculas.cs" />
+    <Compile Include="bdConexion\ConexionProductosComestibles.cs" />
+    <Compile Include="forms\FormCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormCustomers.Designer.cs">
+      <DependentUpon>FormCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FormInsertMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormInsertMovie.Designer.cs">
+      <DependentUpon>FormInsertMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FormInsertProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormInsertProduct.Designer.cs">
+      <DependentUpon>FormInsertProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FormInsertTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormInsertTicket.Designer.cs">
+      <DependentUpon>FormInsertTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FormMovies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormMovies.Designer.cs">
+      <DependentUpon>FormMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FormProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormProducts.Designer.cs">
+      <DependentUpon>FormProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FormSchedules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormSchedules.Designer.cs">
+      <DependentUpon>FormSchedules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FormInsertSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormInsertSchedule.Designer.cs">
+      <DependentUpon>FormInsertSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FormTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormTickets.Designer.cs">
+      <DependentUpon>FormTickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FormInsertCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormInsertCustomer.Designer.cs">
+      <DependentUpon>FormInsertCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="forms\FormCustomers.resx">
+      <DependentUpon>FormCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormInsertCustomer.resx">
+      <DependentUpon>FormInsertCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormInsertMovie.resx">
+      <DependentUpon>FormInsertMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormInsertProduct.resx">
+      <DependentUpon>FormInsertProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormInsertSchedule.resx">
+      <DependentUpon>FormInsertSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormInsertTicket.resx">
+      <DependentUpon>FormInsertTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormMovies.resx">
+      <DependentUpon>FormMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormProducts.resx">
+      <DependentUpon>FormProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormSchedules.resx">
+      <DependentUpon>FormSchedules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormTickets.resx">
+      <DependentUpon>FormTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="autocinemaDataSet.xsc">
+      <DependentUpon>autocinemaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="autocinemaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>autocinemaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="autocinemaDataSet.xss">
+      <DependentUpon>autocinemaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\png\subtract_32px.png" />
+    <None Include="images\png\delete_32px.png" />
+    <Content Include="images\png\icons8_calendar_30px.png" />
+    <Content Include="images\png\icons8_close_window_30px.png" />
+    <Content Include="images\png\icons8_delete_32px_3.png" />
+    <Content Include="images\png\icons8_movie_30px_1.png" />
+    <Content Include="images\png\icons8_people_24px_3.png" />
+    <Content Include="images\png\icons8_pizza_30px.png" />
+    <Content Include="images\png\icons8_plus_26px_1.png" />
+    <Content Include="images\png\icons8_popcorn_time_100px.png" />
+    <Content Include="images\png\icons8_popcorn_time_50px_4.png" />
+    <Content Include="images\png\icons8_popcorn_time_50px_5.png" />
+    <Content Include="images\png\icons8_ticket_30px_1.png" />
+    <Content Include="images\png\icons8_trash_30px.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\png\plus_30px.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
